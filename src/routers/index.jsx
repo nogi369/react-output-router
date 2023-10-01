@@ -21,11 +21,3 @@ export const router = createBrowserRouter([
     element: <TodoCreatePage />,
   },
 ]);
-
-// `${BASE_PATH}/create/
-
-// ベースPATH
-// export const BASE_PATH = "react-output-router";
-
-// やりたいこと
-// "react-output-router/create"
