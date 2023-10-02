@@ -1,10 +1,11 @@
 import { Navigation } from "../../molecules/Navigation";
+import styles from "./styles.module.css";
 
 export const BaseLayout = ({ children, title }) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <section>
+    <div className={styles.container}>
+      <h1 className={styles.title}>{title}</h1>
+      <section className={styles.common}>
         <Navigation />
       </section>
       {children}

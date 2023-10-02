@@ -21,14 +21,16 @@ export const TodoTemplate = () => {
   return (
     <BaseLayout title={"TodoList"}>
       <div className={styles.container}>
-        <div>
+        {/* Todo検索フォームエリア */}
+        <div className={styles.area}>
           <InputForm
             handleChangeValue={handleChangeSearchKeyword}
             inputValue={searchKeyword}
             placeholder={"Search Keyword"}
           />
         </div>
-        <div>
+        {/* Todoリスト一覧表示 */}
+        <div className={styles.area}>
           {showTodoList.length > 0 && (
             <TodoList
               todoList={showTodoList}
@@ -48,23 +50,4 @@ export const TodoTemplate = () => {
 //   onChangeTodo={onChangeAddInputValue}
 //   handleAddTodo={handleAddTodo}
 // />
-// </section>
-
-// 検索フォーム
-// <section className={styles.common}>
-// <InputForm
-//   handleChangeValue={handleChangeSearchKeyword}
-//   inputValue={searchKeyword}
-//   placeholder={"Search Keyword"}
-// />
-// </section>
-
-// showTodoList
-// <section className={styles.common}>
-// {showTodoList.length > 0 && (
-//   <TodoList
-//     todoList={showTodoList}
-//     handleDeleteTodo={handleDeleteTodo}
-//   />
-// )}
 // </section>
