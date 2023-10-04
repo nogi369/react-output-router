@@ -12,7 +12,7 @@ import styles from "./styles.module.css";
  */
 
 export const InputForm = (props) => {
-  const { placeholder, inputValue, handleChangeValue, handleKeyDown } = props;
+  const { placeholder, inputValue, onChange, onKeyDown } = props;
 
   /**
    * 渡ってくるpropsを確認する方法
@@ -24,8 +24,8 @@ export const InputForm = (props) => {
       type="text"
       placeholder={placeholder}
       value={inputValue}
-      onChange={handleChangeValue}
-      onKeyDown={handleKeyDown}
+      onChange={onChange}
+      onKeyDown={onKeyDown}
     />
   );
 };
