@@ -10,3 +10,7 @@
   font-family: "Times New Roman", Times, serif;
   border-radius: 5px;
 }
+
+.input::placeholder {
+  color: #c0c0c0;
+}
