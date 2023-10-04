@@ -1,43 +1,18 @@
-import { useCallback, useState } from "react";
 import { CommonButton } from "../../atoms/CommonButton";
 import { InputForm } from "../../atoms/InputForm";
 import { TextArea } from "../../atoms/TextArea";
 import { BaseLayout } from "../../organisms/BaseLayout";
 import styles from "./styles.module.css";
-import { useNavigate } from "react-router-dom";
 import { useTodoContext } from "../../../Contexts/TodoContext";
-import { NAVIGATION_LIST } from "../../../constants/navigations";
+import { useTodoCreateTemplate } from "./useTodoCreateTemplate";
 
 export const TodoCreateTemplate = () => {
-  const navigate = useNavigate();
   const { addTodo } = useTodoContext();
 
-  // local state
-  const [inputTitle, setInputTitle] = useState("");
-  const [inputContent, setInputContent] = useState("");
-
-  // 「title」変更処理
-  const handleChangeTitle = useCallback(
-    (e) => setInputTitle(e.target.value),
-    []
-  );
-
-  // 「content」変更処理
-  const handleChangeContent = useCallback(
-    (e) => setInputContent(e.target.value),
-    []
-  );
-
-  const handleCreateTodo = useCallback(
-    (e) => {
-      e.preventDefault();
-      if (inputTitle !== "" && inputContent !== "") {
-        addTodo(inputTitle, inputContent);
-        navigate(NAVIGATION_LIST.TOP);
-      }
-    },
-    [addTodo, inputTitle, inputContent, navigate]
-  );
+  const [
+    { inputTitle, inputContent },
+    { handleChangeTitle, handleChangeContent, handleCreateTodo },
+  ] = useTodoCreateTemplate({ addTodo });
 
   return (
     <BaseLayout title={"Create Todo"}>
