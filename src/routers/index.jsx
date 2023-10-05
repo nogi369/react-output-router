@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import { BASE_PATH, NAVIGATION_LIST } from "../constants/navigations";
 import { TodoPage } from "../pages/todo";
 import { TodoCreatePage } from "../pages/create";
+import { TodoDetailPage } from "../pages/detail";
+import { TodoEditPage } from "../pages/edit";
 
 export const router = createBrowserRouter([
   {
@@ -10,7 +12,7 @@ export const router = createBrowserRouter([
   },
   {
     path: NAVIGATION_LIST.DETAILE,
-    element: <TodoCreatePage />,
+    element: <TodoDetailPage />,
   },
   {
     path: NAVIGATION_LIST.CREATE,
@@ -18,6 +20,6 @@ export const router = createBrowserRouter([
   },
   {
     path: NAVIGATION_LIST.EDIT,
-    element: <TodoCreatePage />,
+    element: <TodoEditPage />,
   },
 ]);

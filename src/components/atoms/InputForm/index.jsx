@@ -12,18 +12,15 @@ import styles from "./styles.module.css";
  */
 
 export const InputForm = (props) => {
-  const { placeholder, inputValue, onChange, onKeyDown } = props;
+  const { disabled = false, value, placeholder, onChange, onKeyDown } = props;
 
-  /**
-   * 渡ってくるpropsを確認する方法
-   * DevToolsのComponentsタブの該当コンポーネントの左辺が親から渡ってくるprops
-   */
   return (
     <input
+      disabled={disabled}
       className={styles.input}
       type="text"
       placeholder={placeholder}
-      value={inputValue}
+      value={value}
       onChange={onChange}
       onKeyDown={onKeyDown}
     />
