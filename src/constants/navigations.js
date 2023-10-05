@@ -12,7 +12,7 @@ export const NAVIGATION_LIST = {
 // パス一覧(画面遷移時に使用)
 export const NAVIGATION_PATH = {
   TOP: `${BASE_PATH}/`,
-  // DETAILE: `${BASE_PATH}/detail/`,
+  DETAILE: `${BASE_PATH}/detail/`,
   CREATE: `${BASE_PATH}/create/`,
-  // EDIT: `${BASE_PATH}/edit/`,
+  EDIT: `${BASE_PATH}/edit/`,
 };
