@@ -16,7 +16,7 @@ export const TodoCreateTemplate = () => {
 
   return (
     <BaseLayout title={"Create Todo"}>
-      <form className={styles.container} onClick={handleCreateTodo}>
+      <form className={styles.container} onSubmit={handleCreateTodo}>
         <div className={styles.area}>
           <InputForm
             placeholder={"Title"}
@@ -41,3 +41,5 @@ export const TodoCreateTemplate = () => {
 
 // useNavigate
 // https://rapids-tech.com/react-router-usenavigate/
+// onsubmit
+// https://magazine.techacademy.jp/magazine/22317

@@ -9,7 +9,7 @@ const TodoContext = createContext({});
 // children: https://choippo.com/react-component-children/
 // useTodoからstateとpropsを取り出す
 export const TodoProvider = ({ children }) => {
-  const { originTodoList, addTodo, deleteTodo } = useTodo();
+  const { originTodoList, addTodo, updateTodo, deleteTodo } = useTodo();
 
   // Context.Provider で配下コンポーネントにContextを提供する
   return (
@@ -17,6 +17,7 @@ export const TodoProvider = ({ children }) => {
       value={{
         originTodoList,
         addTodo,
+        updateTodo,
         deleteTodo,
       }}
     >

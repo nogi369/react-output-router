@@ -25,19 +25,44 @@ export const useTodo = () => {
     [originTodoList, uniqueId]
   );
 
-  // 削除処理
-  const deleteTodo = (targetId, targetTitle) => {
-    // 「OK」時の処理 ＋ 確認ダイアログの表示
-    if (window.confirm(`「${targetTitle}」のtodoを削除しますか？`)) {
-      const newTodoList = originTodoList.filter((todo) => todo.id !== targetId);
+  // 更新処理
+  const updateTodo = useCallback(
+    (id, title, content) => {
+      const updatedTodoList = originTodoList.map((todo) => {
+        if (id === todo.id) {
+          return {
+            id: todo.id,
+            title: title,
+            content: content,
+          };
+        }
 
-      setOriginTodoList(newTodoList);
-    }
-  };
+        return todo;
+      });
+      setOriginTodoList(updatedTodoList);
+    },
+    [originTodoList]
+  );
+
+  // 削除処理
+  const deleteTodo = useCallback(
+    (targetId, targetTitle) => {
+      // 「OK」時の処理 ＋ 確認ダイアログの表示
+      if (window.confirm(`「${targetTitle}」のtodoを削除しますか？`)) {
+        const newTodoList = originTodoList.filter(
+          (todo) => todo.id !== targetId
+        );
+
+        setOriginTodoList(newTodoList);
+      }
+    },
+    [originTodoList]
+  );
 
   return {
     originTodoList,
     addTodo,
+    updateTodo,
     deleteTodo,
   };
 };
