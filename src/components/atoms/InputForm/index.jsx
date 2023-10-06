@@ -11,9 +11,13 @@ import styles from "./styles.module.css";
  * https://magazine.techacademy.jp/magazine/27030
  */
 
-export const InputForm = (props) => {
-  const { disabled = false, value, placeholder, onChange, onKeyDown } = props;
-
+export const InputForm = ({
+  disabled = false,
+  value,
+  placeholder,
+  onChange,
+  onKeyDown,
+}) => {
   return (
     <input
       disabled={disabled}
