@@ -1,6 +1,13 @@
 import { Navigation } from "../../molecules/Navigation";
 import styles from "./styles.module.css";
 
+/**
+ * BaseLayout
+ * @param children
+ * @param title
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const BaseLayout = ({ children, title }) => (
   <div className={styles.container}>
     <section className={styles.common}>

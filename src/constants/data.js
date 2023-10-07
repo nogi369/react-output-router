@@ -1,3 +1,6 @@
+/**
+ * Todoリストの処置値
+ */
 export const INIT_TODO_LIST = [
   {
     id: 1,
@@ -11,4 +14,7 @@ export const INIT_TODO_LIST = [
   },
 ];
 
+/**
+ * Todo採番IDの初期値
+ */
 export const INIT_UNIQUE_ID = INIT_TODO_LIST.length;

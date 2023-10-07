@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { BASE_PATH, NAVIGATION_LIST } from "../constants/navigations";
+import { NAVIGATION_LIST } from "../constants/navigations";
 import { TodoPage } from "../pages/todo";
 import { TodoCreatePage } from "../pages/create";
 import { TodoDetailPage } from "../pages/detail";
@@ -7,11 +7,11 @@ import { TodoEditPage } from "../pages/edit";
 
 export const router = createBrowserRouter([
   {
-    path: BASE_PATH,
+    path: NAVIGATION_LIST.TOP,
     element: <TodoPage />,
   },
   {
-    path: NAVIGATION_LIST.DETAILE,
+    path: NAVIGATION_LIST.DETAIL,
     element: <TodoDetailPage />,
   },
   {

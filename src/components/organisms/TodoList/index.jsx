@@ -14,7 +14,7 @@ export const TodoList = ({ todoList, handleDeleteTodo }) => {
 
   // 詳細ページに遷移する処理
   const handleMoveDetailPage = useCallback(
-    (id) => navigate(`${NAVIGATION_PATH.DETAILE}${id}`),
+    (id) => navigate(`${NAVIGATION_PATH.DETAIL}${id}`),
     [navigate]
   );
 

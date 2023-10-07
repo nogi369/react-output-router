@@ -8,6 +8,11 @@ const TodoContext = createContext({});
 
 // children: https://choippo.com/react-component-children/
 // useTodoからstateとpropsを取り出す
+/**
+ * TodoProvider
+ * @param children
+ * @constructor
+ */
 export const TodoProvider = ({ children }) => {
   const { originTodoList, addTodo, updateTodo, deleteTodo } = useTodo();
 
@@ -26,4 +31,7 @@ export const TodoProvider = ({ children }) => {
   );
 };
 
+/**
+ * useTodoContext
+ */
 export const useTodoContext = () => useContext(TodoContext);

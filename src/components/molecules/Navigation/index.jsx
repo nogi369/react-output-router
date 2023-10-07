@@ -2,6 +2,11 @@ import { NavigationLink } from "../../atoms/NavigationLink";
 import { NAVIGATION_PATH } from "../../../constants/navigations";
 import styles from "./styles.module.css";
 
+/**
+ * Navigation
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export const Navigation = () => (
   <nav>
     <ul className={styles.ul}>
